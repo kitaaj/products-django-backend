@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "rest_framework",
     "products.apps.ProductsConfig",
+    "users.apps.UsersConfig",
 ]
 
 MIDDLEWARE = [
@@ -77,12 +78,12 @@ WSGI_APPLICATION = "backend.wsgi.application"
 
 DATABASES = {
     "default": {
-        'ENGINE':'django.db.backends.postgresql_psycopg2',
-        'NAME':'dishpoa',#NAME OF THE DB
-        'USER':'dishpoa',
-        'PASSWORD':'dishpoa',
-        'HOST':'localhost',
-        'PORT':'5432',
+        "ENGINE": "django.db.backends.postgresql_psycopg2",
+        "NAME": "esoko",  # NAME OF THE DB
+        "USER": "esoko",
+        "PASSWORD": "sirjohn001",
+        "HOST": "localhost",
+        "PORT": "5432",
     }
 }
 
@@ -127,3 +128,5 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+AUTH_USER_MODEL = "users.CustomUser"
